@@ -1,0 +1,15 @@
+{
+  "name": "zonabot",
+  "version": "1.0.0",
+  "description": "Bot de l'entreprise ZoNa.Net",
+  "main": "index.js",
+  "scripts": {
+    "test": "Z+help"
+  },
+  "author": "ZedoD3v",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.0",
+    "lowdb": "^1.0.0"
+  }
+}
