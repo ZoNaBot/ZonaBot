@@ -1,0 +1,17 @@
+{
+  "warns": [],
+  "commands": [
+    {
+      "id": 1.4626680554250404,
+      "nom": "code-html-base",
+      "code": "<!DOCTYPE html>\n<html>\n<head>\n <meta charset=\"utf-8\" />\n <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n <title>Page Title</title>\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"main.css\" />\n <script src=\"main.js\"></script>\n</head>\n<body>\n \n</body>\n</html>",
+      "author": "ZedoD3v#0554"
+    },
+    {
+      "id": 1.2908047154892421,
+      "nom": "base-discord.js",
+      "code": "bot.on('message', message => {\n if (message.content === \"ping\"){\n message.channel.send(\"Pong !\")\n }\n})",
+      "author": "ZedoD3v#0554"
+    }
+  ]
+}
