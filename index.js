@@ -37,10 +37,6 @@ bot.on('message', message => {
         message.channel.send(`Page d'aide envoyer en privé :white_check_mark:`)
         
     }
-    
-    if (command === "Bonjour"){
-        message.channel.send("Bonjour")
-    }
 
     if (command === "botinfo") {
 
