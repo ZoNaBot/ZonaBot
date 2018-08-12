@@ -25,7 +25,7 @@ bot.on('message', message => {
     if (!message.content.startsWith(prefix)) return
     var guildid = message.guild.id
     var guildname = message.guild.name
-
+    
     if (command === "help") {
         let embed = new Discord.RichEmbed()
         .setTitle(`Page d'aide`)
@@ -36,6 +36,10 @@ bot.on('message', message => {
         message.author.send(embed)
         message.channel.send(`Page d'aide envoyer en privé :white_check_mark:`)
         
+    }
+    
+    if (command === "Bonjour"){
+        message.channel.send("Bonjour")
     }
 
     if (command === "botinfo") {
