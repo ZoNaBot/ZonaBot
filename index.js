@@ -249,6 +249,7 @@ bot.on('message', message => {
         .setColor(color)
         .setFooter("ZoNa.Net", bot.user.displayAvatarURL)
         var channel = message.guild.channels.find("id", "478479000793251860")
+        if (!channel) return
         channel.send("<@&477552508064104448>")
         channel.send(embed)
     }
