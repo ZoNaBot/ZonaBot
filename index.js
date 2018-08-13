@@ -238,6 +238,20 @@ bot.on('message', message => {
         if (!reason) reason = "Aucune raison"
         member.ban(reason).then(message.channel.send(`L'utilisteur **${member.user.tag}** a été ban par **${msgauthor}** pour **${reason}**`))
     }
+    
+        if(command === "cours"){
+        let role = message.guild.roles.find("name", "---Professeurs---")
+        if (!args[0]) return message.reply("Merci de mettre un cours !")
+        let embed = new Discord.RichEmbed()
+        .setTitle("Demande de cours")
+        .addField("Pseudo", message.author.tag)
+        .addField("Cours", args[0])
+        .setColor(color)
+        .setFooter("ZoNa.Net", bot.user.displayAvatarURL)
+        var channel = message.guild.channels.find("id", "478479000793251860")
+        channel.send("<@&477552508064104448>")
+        channel.send(embed)
+    }
 
 })
 
