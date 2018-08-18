@@ -58,7 +58,37 @@ bot.on('message', message => {
 
         message.channel.sendEmbed(srvlist_embed)
     }
-
+    if(command === "disconect"){
+        var rolefinddeco = message.guild.roles.find("id", "480409445709381652")
+        if(!rolefinddeco) return
+        var rolefindco = message.guild.roles.find("id", "480411482509541386")
+        if(!rolefinddeco) return
+        const fs = require("fs");
+    	let logindisco = JSON.parse(fs.readFileSync("./logindisco.json", "utf8"));
+        if(!logindisco[message.author.id]) return message.channel.send(" :x: Vous êtes déjà déconnecté(e) :x:)
+        message.member.removeRole(rolefindco.id)
+        message.member.addRole(rolefinddeco.id)
+        
+		delete logindisco[message.author.id]
+        fs.writeFile("./logindisco.json", JSON.stringify(logindisco), (err) => { if (err) console.error(err);});
+		
+    }
+    if(command === "login"){
+        var rolefinddeco = message.guild.roles.find("id", "480409445709381652")
+        if(!rolefinddeco) return
+        var rolefindco = message.guild.roles.find("id", "480411482509541386")
+        if(!rolefinddeco) return
+        const fs = require("fs");
+    	let logindisco = JSON.parse(fs.readFileSync("./logindisco.json", "utf8"));
+        if(logindisco[message.author.id]) return message.channel.send(" :x: Vous êtes déjà connecté(e) :x:)
+        message.member.removeRole(rolefinddeco.id)
+        message.member.addRole(rolefindco.id)
+        
+		logindisco[message.author.id] = {"logindisco" : "Connect"};
+        
+        fs.writeFile("./logindisco.json", JSON.stringify(logindisco), (err) => { if (err) console.error(err);});
+		
+    }
     if (command === "invitebot"){
         let embed = new Discord.RichEmbed()
         .setTitle("Clique ici")
