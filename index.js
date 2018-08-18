@@ -65,7 +65,7 @@ bot.on('message', message => {
         if(!rolefinddeco) return
         const fs = require("fs");
     	let logindisco = JSON.parse(fs.readFileSync("./logindisco.json", "utf8"));
-        if(!logindisco[message.author.id]) return message.channel.send(" :x: Vous êtes déjà déconnecté(e) :x:)
+        if(!logindisco[message.author.id]) return message.channel.send(" :x: Vous êtes déjà déconnecté(e) :x: ")
         message.member.removeRole(rolefindco.id)
         message.member.addRole(rolefinddeco.id)
         
@@ -80,7 +80,7 @@ bot.on('message', message => {
         if(!rolefinddeco) return
         const fs = require("fs");
     	let logindisco = JSON.parse(fs.readFileSync("./logindisco.json", "utf8"));
-        if(logindisco[message.author.id]) return message.channel.send(" :x: Vous êtes déjà connecté(e) :x:)
+        if(logindisco[message.author.id]) return message.channel.send(" :x: Vous êtes déjà connecté(e) :x: ")
         message.member.removeRole(rolefinddeco.id)
         message.member.addRole(rolefindco.id)
         
